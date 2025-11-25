@@ -12,18 +12,19 @@ start:
 	goto RECURSIVIDADE
 
 ALOCA:
-	load 13
-	xto Y
-	tox R3
-	LE
-	IF
-	goto fim
+
 	tox R3
 	xto M
 	tox R0
 	movexa 15
 	goto ponteiro
 
+	load 13
+	xto Y
+	tox R0
+	EQ
+	IF
+	goto fim
 RECURSIVIDADE:
 	tox R1
 	xto R0
