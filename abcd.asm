@@ -1,17 +1,3 @@
-funcao:
-	load 0
-	xto Y
-	load 1
-	xto R4 	
-
-pisca:
-	BC
-	xto R4
-	BS
-	xto R4
-	goto pisca
-
-
 start:
 	load 0
 	xto M
@@ -37,9 +23,8 @@ ALOCA:
 	tox R0
 	EQ
 	IF
-	
 	goto ponteiro
-	goto fim
+	goto escolha
 RECURSIVIDADE:
 	tox R1
 	xto R0
@@ -61,5 +46,15 @@ ponteiro:
 	goto RECURSIVIDADE
 
 
-fim:
-	goto fim
+escolha:
+	load 0
+	xto Y
+	load 1
+	xto R4 	
+
+pisca:
+	BC
+	xto R4
+	BS
+	xto R4
+	goto pisca
